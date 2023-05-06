@@ -9,5 +9,18 @@
 <body>
     Hello World!
     Hello all sus
+    <button onclick="playSound()">Play Sound 3 Times</button>
+    <audio id="sound">
+        <source src="sound.mp3" type="audio/mp3">
+    </audio>
+    <script>
+        function playSound() {
+            var audioElement = document.getElementById("sound");
+            for (var i = 0; i < 3; i++) {
+                audioElement.currentTime = 0;
+                audioElement.play();
+            }
+        }
+    </script>
 </body>
 </html>
