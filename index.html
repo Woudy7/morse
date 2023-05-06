@@ -5,22 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    Hello World!
-    Hello all sus
-    <button onclick="playSound()">Play Sound 3 Times</button>
+    <h1>Morse Code Player</h1>
+    <p>Enter text and press the button</p>
+    <form>
+        <label>Beats Per Minute</label>
+        <br>
+        <input type="number" name="Bpm" id="bpm" min="60" max="700" value="300">
+        <br>
+        <label>Text</label>
+        <br>
+        <input type="text" name="MorseCode" id="morseText">
+    </form>
+    <br>
+    <button id="playButton">Play Sound</button>
+    <p id="showMorse"></p>
     <audio id="sound">
         <source src="sound.mp3" type="audio/mp3">
     </audio>
-    <script>
-        function playSound() {
-            var audioElement = document.getElementById("sound");
-            for (var i = 0; i < 3; i++) {
-                audioElement.currentTime = 0;
-                audioElement.play();
-            }
-        }
-    </script>
+    <script type="module" src="./main.js"></script>
 </body>
 </html>
